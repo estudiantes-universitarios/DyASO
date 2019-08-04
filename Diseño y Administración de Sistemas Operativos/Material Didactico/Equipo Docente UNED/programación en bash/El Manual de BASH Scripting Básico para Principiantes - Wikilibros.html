@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>El Manual de BASH Scripting Básico para Principiantes - Wikilibros</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"El_Manual_de_BASH_Scripting_Básico_para_Principiantes","wgTitle":"El Manual de BASH Scripting Básico para Principiantes","wgCurRevisionId":352470,"wgRevisionId":352470,"wgArticleId":18003,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikilibros:Páginas con enlaces rotos a archivos","El Manual de BASH Scripting Básico para Principiantes"],"wgBreakFrames":false,"wgPageContentLanguage":"es","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"wgMonthNamesShort":["","ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],"wgRelevantPageName":"El_Manual_de_BASH_Scripting_Básico_para_Principiantes","wgRelevantArticleId":18003,"wgRequestId":"XAEJIgpAAD0AAFnnSNEAAAAF","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"es","pageLanguageDir":"ltr","pageVariantFallbacks":"es","usePageImages":false,"usePageDescriptions":true},"wgMFExpandAllSectionsUserOption":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgWMESchemaEditAttemptStepOversample":false,"wgULSCurrentAutonym":"español","wgNoticeProject":"wikibooks","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgWikibaseItemId":"Q189248","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","ext.3d.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@00wq302",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"es"});
+});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["ext.cite.a11y","ext.shortUrl","site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=ext.3d.styles%7Cext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=es&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.33.0-wmf.6"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit"/>
+<link rel="shortcut icon" href="/static/favicon/wikibooks.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikilibros (es)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//es.wikibooks.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Canal Atom de Wikilibros" href="/w/index.php?title=Especial:CambiosRecientes&amp;feed=atom"/>
+<link rel="canonical" href="https://es.wikibooks.org/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=es&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-El_Manual_de_BASH_Scripting_Básico_para_Principiantes rootpage-El_Manual_de_BASH_Scripting_Básico_para_Principiantes skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="es">El Manual de BASH Scripting Básico para Principiantes</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Wikilibros, la colección de libros de texto de contenido libre.</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Ir a la navegación</a>
+				<a class="mw-jump-link" href="#p-search">Ir a la búsqueda</a>
+				<div id="mw-content-text" lang="es" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="es" dir="ltr"><h2>Sumario</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Presentación"><span class="tocnumber">1</span> <span class="toctext">Presentación</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Contenido"><span class="tocnumber">2</span> <span class="toctext">Contenido</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Conceptos_e_Historia_de_BASH"><span class="tocnumber">3</span> <span class="toctext">Conceptos e Historia de BASH</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Sintaxis"><span class="tocnumber">3.1</span> <span class="toctext">Sintaxis</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Hola_Mundo_en_BASH"><span class="tocnumber">3.2</span> <span class="toctext">Hola Mundo en BASH</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Variables_en_BASH"><span class="tocnumber">4</span> <span class="toctext">Variables en BASH</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Llamando_a_una_variable"><span class="tocnumber">4.1</span> <span class="toctext">Llamando a una variable</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Generando_un_número_aleatorio_y_enviandolo_a_una_variable"><span class="tocnumber">4.2</span> <span class="toctext">Generando un número aleatorio y enviandolo a una variable</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Comandos_básicos_de_una_shell"><span class="tocnumber">5</span> <span class="toctext">Comandos básicos de una shell</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Condicionales_y_ciclos"><span class="tocnumber">5.1</span> <span class="toctext">Condicionales y ciclos</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#El_básico_(If-Then)"><span class="tocnumber">5.1.1</span> <span class="toctext">El básico (If-Then)</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#El_clon_(Case-Esac)"><span class="tocnumber">5.1.2</span> <span class="toctext">El clon (Case-Esac)</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#El_clásico_(For)"><span class="tocnumber">5.1.3</span> <span class="toctext">El clásico (For)</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#El_ciclo_(While)"><span class="tocnumber">5.1.4</span> <span class="toctext">El ciclo (While)</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#El_otro_ciclo_(Until)"><span class="tocnumber">5.1.5</span> <span class="toctext">El otro ciclo (Until)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Operadores"><span class="tocnumber">6</span> <span class="toctext">Operadores</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Opciones_(parámetros)"><span class="tocnumber">7</span> <span class="toctext">Opciones (parámetros)</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Como_hacer_scripts_con_estilo[1]"><span class="tocnumber">8</span> <span class="toctext">Como hacer scripts con estilo<sup>&#91;1&#93;</sup></span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Debugging_y_errores_comunes[1]"><span class="tocnumber">9</span> <span class="toctext">Debugging y errores comunes<sup>&#91;1&#93;</sup></span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#&quot;Bachismos&quot;_y_compartibilidad_con_POSIX[1]"><span class="tocnumber">10</span> <span class="toctext">"Bachismos" y compartibilidad con POSIX<sup>&#91;1&#93;</sup></span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Compilar_(ofuscar)_BASH_scripts_con_C_-_SHC"><span class="tocnumber">11</span> <span class="toctext">Compilar (ofuscar) BASH scripts con C - SHC</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Combinando_BASH_con_otros_lenguajes_de_scripting"><span class="tocnumber">12</span> <span class="toctext">Combinando BASH con otros lenguajes de scripting</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Otras_shells_interesantes[1]"><span class="tocnumber">13</span> <span class="toctext">Otras shells interesantes<sup>&#91;1&#93;</sup></span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#Autores_y/o_colaboradores_de_este_wikilibro."><span class="tocnumber">13.1</span> <span class="toctext">Autores y/o colaboradores de este wikilibro.</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Muestrario_de_Scripts"><span class="tocnumber">13.2</span> <span class="toctext">Muestrario de Scripts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-26"><a href="#Script_instalador_de_Automatix_2_para_*Ubuntu_6.06_a_7.10_y_Debian_Etch"><span class="tocnumber">13.2.1</span> <span class="toctext">Script instalador de Automatix 2 para *Ubuntu 6.06 a 7.10 y Debian Etch</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Script_para_Bloquear_Páginas_de_Internet_(con_Zenity)"><span class="tocnumber">13.2.2</span> <span class="toctext">Script para Bloquear Páginas de Internet (con Zenity)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#Wikilibros_Relacionados"><span class="tocnumber">14</span> <span class="toctext">Wikilibros Relacionados</span></a></li>
+</ul>
+</div>
+
+<div style="width:100%;font-size:300%;text-align:center;padding:1em;">El Manual de BASH Scripting Básico para Principiantes</div>
+<h2><span id="Presentaci.C3.B3n"></span><span class="mw-headline" id="Presentación">Presentación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=1" title="Editar sección: Presentación">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>¡Saludos! estimado lector. Este libro tiene la finalidad de dar una ligera introducción al mundo del software libre por medio de enseñar lo que se conoce como Shell Scripting, más específicamente enfocado a la shell GNU/BASH.
+</p><p>Te invito si estás leyendo en Wikilibros a que corrijas, traduzcas, amplíes (o dignifiques) el contenido del texto en cuestión. O bien, puedes contactarme en <a href="/wiki/Usuario:LTSmash/Discusi%C3%B3n" title="Usuario:LTSmash/Discusión">mi pagina de discusión</a> y con gusto te tomaré en cuenta.
+</p>
+<dl><dt>Nota importante</dt>
+<dd>Si haces alguna modificación al libro, por favor en la zona de discusión de esta página anota los cambios, siempre que sean significativos. No olvides poner tu firma.</dd></dl>
+<h2><span class="mw-headline" id="Contenido">Contenido</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=2" title="Editar sección: Contenido">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Conceptos_e_Historia_de_BASH"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Conceptos_e_Historia_de_BASH" title="El Manual de BASH Scripting Básico para Principiantes/Conceptos e Historia de BASH">Conceptos e Historia de BASH</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=3" title="Editar sección: Conceptos e Historia de BASH">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Sintaxis"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Sintaxis" title="El Manual de BASH Scripting Básico para Principiantes/Sintaxis">Sintaxis</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=4" title="Editar sección: Sintaxis">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Hola_Mundo_en_BASH"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Hola_Mundo_en_BASH" title="El Manual de BASH Scripting Básico para Principiantes/Hola Mundo en BASH">Hola Mundo en BASH</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=5" title="Editar sección: Hola Mundo en BASH">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h2><span class="mw-headline" id="Variables_en_BASH"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Variables_en_BASH" title="El Manual de BASH Scripting Básico para Principiantes/Variables en BASH">Variables en BASH</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=6" title="Editar sección: Variables en BASH">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Llamando_a_una_variable"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Llamando_a_una_variable" title="El Manual de BASH Scripting Básico para Principiantes/Llamando a una variable">Llamando a una variable</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=7" title="Editar sección: Llamando a una variable">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span id="Generando_un_n.C3.BAmero_aleatorio_y_enviandolo_a_una_variable"></span><span class="mw-headline" id="Generando_un_número_aleatorio_y_enviandolo_a_una_variable"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Generando_un_n%C3%BAmero_aleatorio_y_enviandolo_a_una_variable&amp;action=edit&amp;redlink=1" class="new" title="El Manual de BASH Scripting Básico para Principiantes/Generando un número aleatorio y enviandolo a una variable (la página no existe)">Generando un número aleatorio y enviandolo a una variable</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=8" title="Editar sección: Generando un número aleatorio y enviandolo a una variable">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h2><span id="Comandos_b.C3.A1sicos_de_una_shell"></span><span class="mw-headline" id="Comandos_básicos_de_una_shell"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Comandos_b%C3%A1sicos_de_una_shell" title="El Manual de BASH Scripting Básico para Principiantes/Comandos básicos de una shell">Comandos básicos de una shell</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=9" title="Editar sección: Comandos básicos de una shell">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Condicionales_y_ciclos"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Condicionales_y_ciclos" title="El Manual de BASH Scripting Básico para Principiantes/Condicionales y ciclos">Condicionales y ciclos</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=10" title="Editar sección: Condicionales y ciclos">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="El_b.C3.A1sico_.28If-Then.29"></span><span class="mw-headline" id="El_básico_(If-Then)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/El_b%C3%A1sico_(If-Then)" title="El Manual de BASH Scripting Básico para Principiantes/El básico (If-Then)">El básico (If-Then)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=11" title="Editar sección: El básico (If-Then)">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h4><span id="El_clon_.28Case-Esac.29"></span><span class="mw-headline" id="El_clon_(Case-Esac)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/El_clon_(Case-Esac)" title="El Manual de BASH Scripting Básico para Principiantes/El clon (Case-Esac)">El clon (Case-Esac)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=12" title="Editar sección: El clon (Case-Esac)">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h4><span id="El_cl.C3.A1sico_.28For.29"></span><span class="mw-headline" id="El_clásico_(For)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/El_cl%C3%A1sico_(For)" title="El Manual de BASH Scripting Básico para Principiantes/El clásico (For)">El clásico (For)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=13" title="Editar sección: El clásico (For)">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h4><span id="El_ciclo_.28While.29"></span><span class="mw-headline" id="El_ciclo_(While)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/El_ciclo_(While)" title="El Manual de BASH Scripting Básico para Principiantes/El ciclo (While)">El ciclo (While)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=14" title="Editar sección: El ciclo (While)">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h4><span id="El_otro_ciclo_.28Until.29"></span><span class="mw-headline" id="El_otro_ciclo_(Until)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/El_otro_ciclo_(Until)" title="El Manual de BASH Scripting Básico para Principiantes/El otro ciclo (Until)">El otro ciclo (Until)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=15" title="Editar sección: El otro ciclo (Until)">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h2><span class="mw-headline" id="Operadores"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Operadores" title="El Manual de BASH Scripting Básico para Principiantes/Operadores">Operadores</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=16" title="Editar sección: Operadores">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>var x =5;
+var rectwidth = 30;
+rect (20, 20, rectwidth,rectwidth);
+var w = 25;
+var h = 20;
+rect (20, 20, w, h);
+ellipse ( 20, 20, w, h,);
+var xPos = 15;
+var yPos = 10;
+rect (xPos, yPos, 20, 20);
+var xPos = 60;
+rect ( 30, 40, 50);
+ellipse (xPos, 30, 20, 40);
+ellipse (xPos, 20, 30, 40);<a href="/wiki/Cuadrito_juego" title="Cuadrito juego">Cuadrito juego</a>
+</p>
+<h2><span id="Opciones_.28par.C3.A1metros.29"></span><span class="mw-headline" id="Opciones_(parámetros)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Opciones_(par%C3%A1metros)" title="El Manual de BASH Scripting Básico para Principiantes/Opciones (parámetros)">Opciones (parámetros)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=17" title="Editar sección: Opciones (parámetros)">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Como_hacer_scripts_con_estilo.5B1.5D"></span><span class="mw-headline" id="Como_hacer_scripts_con_estilo[1]"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Como_hacer_scripts_con_estilo&amp;action=edit&amp;redlink=1" class="new" title="El Manual de BASH Scripting Básico para Principiantes/Como hacer scripts con estilo (la página no existe)">Como hacer scripts con estilo</a><sup id="cite_ref-nocreado_1-0" class="reference"><a href="#cite_note-nocreado-1">&#91;1&#93;</a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=18" title="Editar sección: Como hacer scripts con estilo[1]">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Debugging_y_errores_comunes.5B1.5D"></span><span class="mw-headline" id="Debugging_y_errores_comunes[1]"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Debugging_y_errores_comunes&amp;action=edit&amp;redlink=1" class="new" title="El Manual de BASH Scripting Básico para Principiantes/Debugging y errores comunes (la página no existe)">Debugging y errores comunes</a><sup id="cite_ref-nocreado_1-1" class="reference"><a href="#cite_note-nocreado-1">&#91;1&#93;</a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=19" title="Editar sección: Debugging y errores comunes[1]">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id=".22Bachismos.22_y_compartibilidad_con_POSIX.5B1.5D"></span><span class="mw-headline" id="&quot;Bachismos&quot;_y_compartibilidad_con_POSIX[1]"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/%22Bachismos%22_y_compartibilidad_con_POSIX&amp;action=edit&amp;redlink=1" class="new" title="El Manual de BASH Scripting Básico para Principiantes/&quot;Bachismos&quot; y compartibilidad con POSIX (la página no existe)">"Bachismos" y compartibilidad con POSIX</a><sup id="cite_ref-nocreado_1-2" class="reference"><a href="#cite_note-nocreado-1">&#91;1&#93;</a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=20" title="Editar sección: &quot;Bachismos&quot; y compartibilidad con POSIX[1]">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Compilar_.28ofuscar.29_BASH_scripts_con_C_-_SHC"></span><span class="mw-headline" id="Compilar_(ofuscar)_BASH_scripts_con_C_-_SHC"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Compilar_(ofuscar)_BASH_scripts_con_C_-_SHC" title="El Manual de BASH Scripting Básico para Principiantes/Compilar (ofuscar) BASH scripts con C - SHC">Compilar (ofuscar) BASH scripts con C - SHC</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=21" title="Editar sección: Compilar (ofuscar) BASH scripts con C - SHC">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span class="mw-headline" id="Combinando_BASH_con_otros_lenguajes_de_scripting"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Combinando_BASH_con_otros_lenguajes_de_scripting" title="El Manual de BASH Scripting Básico para Principiantes/Combinando BASH con otros lenguajes de scripting">Combinando BASH con otros lenguajes de scripting</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=22" title="Editar sección: Combinando BASH con otros lenguajes de scripting">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h2><span id="Otras_shells_interesantes.5B1.5D"></span><span class="mw-headline" id="Otras_shells_interesantes[1]"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Otras_shells_interesantes&amp;action=edit&amp;redlink=1" class="new" title="El Manual de BASH Scripting Básico para Principiantes/Otras shells interesantes (la página no existe)">Otras shells interesantes</a><sup id="cite_ref-nocreado_1-3" class="reference"><a href="#cite_note-nocreado-1">&#91;1&#93;</a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=23" title="Editar sección: Otras shells interesantes[1]">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Autores_y.2Fo_colaboradores_de_este_wikilibro."></span><span class="mw-headline" id="Autores_y/o_colaboradores_de_este_wikilibro."><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Autores" title="El Manual de BASH Scripting Básico para Principiantes/Autores">Autores</a> y/o colaboradores de este wikilibro.</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=24" title="Editar sección: Autores y/o colaboradores de este wikilibro.">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es&amp;wpDestFile=70%25.svg" class="new" title="Archivo:70%.svg">Grado de desarrollo: 70% (a fecha de 27 sep 2017 - El calculo del desarrollo es aproximado)</a>
+</p>
+<h3><span class="mw-headline" id="Muestrario_de_Scripts">Muestrario de Scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=25" title="Editar sección: Muestrario de Scripts">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En esta sección podrás encontrar scripts de muestra. Por supuesto, todos liberados bajo la licencia GPLv3.
+</p>
+<h4><span id="Script_instalador_de_Automatix_2_para_.2AUbuntu_6.06_a_7.10_y_Debian_Etch"></span><span class="mw-headline" id="Script_instalador_de_Automatix_2_para_*Ubuntu_6.06_a_7.10_y_Debian_Etch"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Script_instalador_de_Automatix_2_para_*Ubuntu_6.06_a_7.10_y_Debian_Etch" title="El Manual de BASH Scripting Básico para Principiantes/Script instalador de Automatix 2 para *Ubuntu 6.06 a 7.10 y Debian Etch">Script instalador de Automatix 2 para *Ubuntu 6.06 a 7.10 y Debian Etch</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=26" title="Editar sección: Script instalador de Automatix 2 para *Ubuntu 6.06 a 7.10 y Debian Etch">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h4><span id="Script_para_Bloquear_P.C3.A1ginas_de_Internet_.28con_Zenity.29"></span><span class="mw-headline" id="Script_para_Bloquear_Páginas_de_Internet_(con_Zenity)"><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes/Script_para_Bloquear_P%C3%A1ginas_de_Internet_(con_Zenity)" title="El Manual de BASH Scripting Básico para Principiantes/Script para Bloquear Páginas de Internet (con Zenity)">Script para Bloquear Páginas de Internet (con Zenity)</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=27" title="Editar sección: Script para Bloquear Páginas de Internet (con Zenity)">editar</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h1><span class="mw-headline" id="Wikilibros_Relacionados">Wikilibros Relacionados</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit&amp;section=28" title="Editar sección: Wikilibros Relacionados">editar</a><span class="mw-editsection-bracket">]</span></span></h1>
+<ul><li><a href="/wiki/Fundamentos_de_programaci%C3%B3n" title="Fundamentos de programación">Fundamentos de Programación</a></li></ul>
+<hr />
+<ol class="references">
+<li id="cite_note-nocreado-1"><span class="mw-cite-backlink">↑ <sup><a href="#cite_ref-nocreado_1-0">1,0</a></sup> <sup><a href="#cite_ref-nocreado_1-1">1,1</a></sup> <sup><a href="#cite_ref-nocreado_1-2">1,2</a></sup> <sup><a href="#cite_ref-nocreado_1-3">1,3</a></sup></span> <span class="reference-text">Este cápitulo aún no ha sido creado.</span>
+</li>
+</ol>
+
+<!-- 
+NewPP limit report
+Parsed by mw1244
+Cached time: 20181125114310
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.044 seconds
+Real time usage: 0.051 seconds
+Preprocessor visited node count: 139/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 652/2097152 bytes
+Template argument size: 74/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1214/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   17.560      1 -total
+ 16.33%    2.867      1 Plantilla:Desarrollo
+ 11.56%    2.030      1 Plantilla:Portada_libro
+-->
+
+<!-- Saved in parser cache with key eswikibooks:pcache:idhash:18003-0!canonical and timestamp 20181125114309 and revision id 352470
+ -->
+</div><noscript><img src="//es.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtenido de «<a dir="ltr" href="https://es.wikibooks.org/w/index.php?title=El_Manual_de_BASH_Scripting_Básico_para_Principiantes&amp;oldid=352470">https://es.wikibooks.org/w/index.php?title=El_Manual_de_BASH_Scripting_Básico_para_Principiantes&amp;oldid=352470</a>»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categor%C3%ADas" title="Especial:Categorías">Categoría</a>: <ul><li><a href="/wiki/Categor%C3%ADa:El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes" title="Categoría:El Manual de BASH Scripting Básico para Principiantes">El Manual de BASH Scripting Básico para Principiantes</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categoría oculta: <ul><li><a href="/wiki/Categor%C3%ADa:Wikilibros:P%C3%A1ginas_con_enlaces_rotos_a_archivos" title="Categoría:Wikilibros:Páginas con enlaces rotos a archivos">Wikilibros:Páginas con enlaces rotos a archivos</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menú de navegación</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Herramientas personales</h3>
+						<ul>
+							<li id="pt-anonuserpage">No has accedido</li><li id="pt-anontalk"><a href="/wiki/Especial:MiDiscusi%C3%B3n" title="Discusión sobre ediciones hechas desde esta dirección IP [n]" accesskey="n">Discusión</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:MisContribuciones" title="Una lista de modificaciones hechas desde esta dirección IP [y]" accesskey="y">Contribuciones</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Crear_una_cuenta&amp;returnto=El+Manual+de+BASH+Scripting+B%C3%A1sico+para+Principiantes" title="Te recomendamos crear una cuenta e iniciar sesión; sin embargo, no es obligatorio">Crear una cuenta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=El+Manual+de+BASH+Scripting+B%C3%A1sico+para+Principiantes" title="Te recomendamos iniciar sesión, aunque no es obligatorio [o]" accesskey="o">Acceder</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espacios de nombres</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes" title="Ver la página de contenido [c]" accesskey="c">Página</a></span></li><li id="ca-talk"><span><a href="/wiki/Discusi%C3%B3n:El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes" rel="discussion" title="Discusión acerca de la página [t]" accesskey="t">Discusión</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes">Leer</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=edit" title="Editar esta página [e]" accesskey="e">Editar</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=history" title="Versiones anteriores de esta página [h]" accesskey="h">Ver historial</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>Más</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Buscar</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Buscar en Wikilibros" title="Buscar en este wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Buscar" name="title"/><input type="submit" name="fulltext" value="Buscar" title="Buscar este texto en las páginas" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir a la página con este nombre exacto si existe" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Portada"  title="Visitar la página principal"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navegación</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage"><a href="/wiki/Portada" title="Visitar la página principal [z]" accesskey="z">Portada</a></li><li id="n-currentevents"><a href="/wiki/Categor%C3%ADa:Libros" title="Encuentra información de contexto sobre acontecimientos actuales">Categorías de libros</a></li><li id="n-recentchanges"><a href="/wiki/Especial:CambiosRecientes" title="Lista de cambios recientes en el wiki [r]" accesskey="r">Cambios recientes</a></li><li id="n-newpages"><a href="/wiki/Especial:P%C3%A1ginasNuevas">Páginas nuevas</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleatoria" title="Cargar un libro seleccionado al azar [x]" accesskey="x">Libro aleatorio</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="El lugar para aprender">Ayuda</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_es.wikibooks.org&amp;uselang=es" title="Apóyanos">Donaciones</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Comunidad" aria-labelledby="p-Comunidad-label">
+			<h3 id="p-Comunidad-label">Comunidad</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Café"><a href="/wiki/Wikilibros:Caf%C3%A9">Café</a></li><li id="n-portal"><a href="/wiki/Wikilibros:Portal_de_la_comunidad" title="Acerca del proyecto, lo que puedes hacer, dónde encontrar información">Portal de la comunidad</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Subproyectos" aria-labelledby="p-Subproyectos-label">
+			<h3 id="p-Subproyectos-label">Subproyectos</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Recetario"><a href="/wiki/Artes_culinarias">Recetario</a></li><li id="n-Wikichicos"><a href="/wiki/Wikichicos">Wikichicos</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Imprimir/exportar</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Libro&amp;bookcmd=book_creator&amp;referer=El+Manual+de+BASH+Scripting+B%C3%A1sico+para+Principiantes">Crear una colección</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:ElectronPdf&amp;page=El+Manual+de+BASH+Scripting+B%C3%A1sico+para+Principiantes&amp;action=show-download-screen">Descargar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;printable=yes" title="Versión imprimible de esta página [p]" accesskey="p">Versión para imprimir</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-wikibase-otherprojects" aria-labelledby="p-wikibase-otherprojects-label">
+			<h3 id="p-wikibase-otherprojects-label">En otros proyectos</h3>
+			<div class="body">
+								<ul>
+					<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:GNU_Bash" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikipedia"><a href="https://es.wikipedia.org/wiki/Bash" hreflang="es">Wikipedia</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Herramientas</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Especial:LoQueEnlazaAqu%C3%AD/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes" title="Lista de todas las páginas del wiki que enlazan aquí [j]" accesskey="j">Lo que enlaza aquí</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:CambiosEnEnlazadas/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes" rel="nofollow" title="Cambios recientes en las páginas que enlazan con esta [k]" accesskey="k">Cambios relacionados</a></li><li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es" title="Subir archivos [u]" accesskey="u">Subir archivo</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginasEspeciales" title="Lista de todas las páginas especiales [q]" accesskey="q">Páginas especiales</a></li><li id="t-permalink"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;oldid=352470" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-info"><a href="/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;action=info" title="Más información sobre esta página">Información de la página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q189248" title="Enlace al elemento conectado del repositorio de datos [g]" accesskey="g">Elemento de Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;id=352470" title="Información sobre cómo citar esta página">Citar esta página</a></li><li id="t-shorturl"><a href="//es.wikibooks.org/s/6ks" title="Copie este enlace corto para compartirlo">Enlace corto</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">En otros idiomas</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikibooks.org/wiki/%D8%B3%D8%B7%D8%B1_%D8%A3%D9%88%D8%A7%D9%85%D8%B1_%D9%84%D9%8A%D9%86%D9%83%D8%B3" title="سطر أوامر لينكس (árabe)" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikibooks.org/wiki/Bash_Shell_Scripting" title="Bash Shell Scripting (inglés)" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikibooks.org/wiki/Programmation_Bash" title="Programmation Bash (francés)" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikibooks.org/wiki/Bash" title="Bash (gallego)" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikibooks.org/wiki/Bash" title="Bash (islandés)" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikibooks.org/wiki/Bash" title="Bash (polaco)" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q189248#sitelinks-wikibooks" title="Editar enlaces interlingüísticos" class="wbc-editpage">Editar enlaces</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> Esta página se editó por última vez el 16 abr 2018 a las 12:34.</li>
+								<li id="footer-info-copyright">El texto está disponible bajo la <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Licencia Creative Commons Atribución-CompartirIgual 3.0</a>;
+pueden aplicarse términos adicionales.
+Véase <a href="https://foundation.wikimedia.org/wiki/Terms_of_Use/es">Términos de uso</a> para más detalles.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/es" class="extiw" title="m:Privacy policy/es">Política de protección de datos</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikilibros:Acerca_de" title="Wikilibros:Acerca de">Acerca de Wikilibros</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikilibros:Descargo_general" class="mw-redirect" title="Wikilibros:Descargo general">Exoneraciones</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Desarrolladores</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement/es">Declaración de cookies</a></li>
+								<li id="footer-places-mobileview"><a href="//es.m.wikibooks.org/w/index.php?title=El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versión para móviles</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.044","walltime":"0.051","ppvisitednodes":{"value":139,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":652,"limit":2097152},"templateargumentsize":{"value":74,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1214,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%   17.560      1 -total"," 16.33%    2.867      1 Plantilla:Desarrollo"," 11.56%    2.030      1 Plantilla:Portada_libro"]},"cachereport":{"origin":"mw1244","timestamp":"20181125114310","ttl":1900800,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"El Manual de BASH Scripting B\u00e1sico para Principiantes","url":"https:\/\/es.wikibooks.org\/wiki\/El_Manual_de_BASH_Scripting_B%C3%A1sico_para_Principiantes","sameAs":"http:\/\/www.wikidata.org\/entity\/Q189248","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q189248","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-11-06T23:41:36Z","dateModified":"2018-04-16T12:34:37Z","headline":"programa inform\u00e1tico cuya funci\u00f3n consiste en interpretar \u00f3rdenes"}</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":119,"wgHostname":"mw1266"});});</script>
+	</body>
+</html>
